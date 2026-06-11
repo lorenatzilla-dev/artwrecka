@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Wrecka — Blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="site">
+  <div id="header"></div>
+
+  <main>
+    <div class="layout">
+      <!-- Posts column -->
+      <div>
+        <h2 class="sr-only">Posts</h2>
+        <div id="posts-list"></div>
+        <nav class="pagination" id="pagination" aria-label="Page navigation"></nav>
+      </div>
+
+      <!-- Separator -->
+      <div class="col-sep" aria-hidden="true"></div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="About and recent posts">
+        <div id="sidebar"></div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<div class="site" id="footer-wrap"></div>
+
+<script src="js/data.js"></script>
+<script>
+  const PER_PAGE = 8;
+  const params   = new URLSearchParams(location.search);
+  let page       = parseInt(params.get('page') || '1', 10);
+  const total    = Math.ceil(POSTS.length / PER_PAGE);
+
+  // Clamp page
+  if (page < 1) page = 1;
+  if (page > total) page = total;
+
+  // Header & sidebar & footer
+  document.getElementById('header').innerHTML       = headerHTML('blog');
+  document.getElementById('sidebar').innerHTML      = sidebarHTML(null);
+  document.getElementById('footer-wrap').innerHTML  = footerHTML();
+
+  // Posts
+  const start = (page - 1) * PER_PAGE;
+  const slice = POSTS.slice(start, start + PER_PAGE);
+
+  document.getElementById('posts-list').innerHTML = slice.map(p => `
+    <article class="post-card">
+      <a href="article.html?slug=${p.slug}" class="post-thumb" aria-hidden="true" tabindex="-1">
+        ${thumbSVG()}
+      </a>
+      <div>
+        <a class="post-title" href="article.html?slug=${p.slug}">${p.title}</a>
+        <p class="post-excerpt">${p.excerpt}</p>
+        <div class="post-footer">
+          <div class="post-meta">${p.date} · <span>Art Wrecka</span></div>
+          <a class="btn-read" href="article.html?slug=${p.slug}">Read</a>
+        </div>
+      </div>
+    </article>
+  `).join('');
+
+  // Pagination
+  document.getElementById('pagination').innerHTML = Array.from({ length: total }, (_, i) => {
+    const n = i + 1;
+    const href = n === 1 ? 'index.html' : `index.html?page=${n}`;
+    return `<a class="page-btn${n === page ? ' active' : ''}" href="${href}"${n === page ? ' aria-current="page"' : ''}>${n}</a>`;
+  }).join('');
+</script>
+</body>
+</html>

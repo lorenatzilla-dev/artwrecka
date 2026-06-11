@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Wrecka — Article</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="site">
+  <div id="header"></div>
+
+  <main>
+    <div class="layout">
+      <!-- Article column -->
+      <div>
+        <a class="article-back" href="javascript:history.back()">← Back to blog</a>
+
+        <div class="article-hero" id="article-hero" aria-hidden="true">
+          <!-- Replace with: <img src="your-image.jpg" alt="Description of image"> -->
+          <svg width="120" height="100" viewBox="0 0 120 100" fill="none" aria-hidden="true">
+            <rect x="10" y="10" width="100" height="80" rx="6" fill="currentColor"/>
+            <circle cx="40" cy="36" r="12" fill="white"/>
+            <path d="M10 70 L36 44 L56 64 L76 40 L110 76" stroke="white" stroke-width="4" fill="none"/>
+          </svg>
+        </div>
+
+        <div class="article-header-meta" id="article-meta"></div>
+        <h1 class="article-title" id="article-title"></h1>
+        <div class="article-body" id="article-body"></div>
+        <div class="article-tags" id="article-tags"></div>
+      </div>
+
+      <!-- Separator -->
+      <div class="col-sep" aria-hidden="true"></div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="About and recent posts">
+        <div id="sidebar"></div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<div class="site" id="footer-wrap"></div>
+
+<script src="js/data.js"></script>
+<script>
+  const slug = new URLSearchParams(location.search).get('slug');
+  const post = POSTS.find(p => p.slug === slug) || POSTS[0];
+
+  document.title = `Art Wrecka — ${post.title}`;
+
+  document.getElementById('header').innerHTML      = headerHTML('blog');
+  document.getElementById('sidebar').innerHTML     = sidebarHTML(post.slug);
+  document.getElementById('footer-wrap').innerHTML = footerHTML();
+
+  document.getElementById('article-meta').textContent =
+    `${post.date} · Art Wrecka · ${post.readTime}`;
+  document.getElementById('article-title').textContent = post.title;
+  document.getElementById('article-body').innerHTML    = post.body;
+
+  document.getElementById('article-tags').innerHTML = post.tags.map(t =>
+    `<span class="article-tag">${t}</span>`
+  ).join('');
+</script>
+</body>
+</html>

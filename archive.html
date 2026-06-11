@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Wrecka — Archive</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="site">
+  <div id="header"></div>
+
+  <main id="archive-content"></main>
+</div>
+
+<div class="site" id="footer-wrap"></div>
+
+<script src="js/data.js"></script>
+<script>
+  document.getElementById('header').innerHTML      = headerHTML('archive');
+  document.getElementById('footer-wrap').innerHTML = footerHTML();
+
+  // Group posts: year → month → posts[]
+  const grouped = {};
+  POSTS.forEach(p => {
+    if (!grouped[p.year]) grouped[p.year] = {};
+    if (!grouped[p.year][p.month]) grouped[p.year][p.month] = [];
+    grouped[p.year][p.month].push(p);
+  });
+
+  const years = Object.keys(grouped).sort((a, b) => b - a);
+
+  document.getElementById('archive-content').innerHTML = years.map(year => {
+    const months = Object.keys(grouped[year]);
+    const total  = months.reduce((sum, m) => sum + grouped[year][m].length, 0);
+
+    const monthsHTML = months.map(month => {
+      const posts = grouped[year][month];
+      const postsHTML = posts.map(p => `
+        <div class="archive-post">
+          <a href="article.html?slug=${p.slug}">→ ${p.title}</a>
+          <span class="archive-post-date">${p.date}</span>
+        </div>
+      `).join('');
+      return `
+        <div class="archive-month">
+          <div class="archive-month-title">${month}</div>
+          ${postsHTML}
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <section class="archive-year" aria-label="${year}">
+        <h2 class="archive-year-title">
+          ${year}
+          <span class="count-badge">${total}</span>
+        </h2>
+        ${monthsHTML}
+      </section>
+    `;
+  }).join('');
+</script>
+</body>
+</html>

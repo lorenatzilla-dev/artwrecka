@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Wrecka — Library</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="site">
+  <div id="header"></div>
+
+  <main>
+    <div id="library-content"></div>
+  </main>
+</div>
+
+<div class="site" id="footer-wrap"></div>
+
+<script src="js/data.js"></script>
+<script>
+  document.getElementById('header').innerHTML      = headerHTML('library');
+  document.getElementById('footer-wrap').innerHTML = footerHTML();
+
+  const years = [...new Set(BOOKS.map(b => b.year))].sort((a, b) => b - a);
+
+  document.getElementById('library-content').innerHTML = years.map(year => {
+    const yBooks = BOOKS.filter(b => b.year === year);
+    const rows = yBooks.map(b => `
+      <div class="book-row">
+        <div class="book-info">
+          <a class="book-title" href="book.html?slug=${b.slug}">${b.title}</a>
+          <div class="book-author">${b.author}</div>
+        </div>
+        <span class="book-genre ${b.genreClass}">${b.genre}</span>
+        <div class="stars" aria-label="${b.stars} out of 5 stars">${starsHTML(b.stars)}</div>
+      </div>
+    `).join('');
+
+    return `
+      <section class="library-year" aria-label="${year}">
+        <h2 class="library-year-title">
+          ${year}
+          <span class="count-badge">${yBooks.length}</span>
+        </h2>
+        ${rows}
+      </section>
+    `;
+  }).join('');
+</script>
+</body>
+</html>
