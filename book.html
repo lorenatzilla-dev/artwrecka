@@ -15,10 +15,7 @@
     <a class="article-back" href="library.html">← Back to library</a>
 
     <div class="book-detail-grid">
-      <div class="book-cover" id="book-cover" aria-hidden="true">
-        <!-- Replace the emoji below with: <img src="cover.jpg" alt="Cover of [Book Title]"> -->
-        📖
-      </div>
+      <div class="book-cover" id="book-cover">📖</div>
       <div>
         <h1 class="book-detail-title" id="book-title"></h1>
         <div class="book-detail-author" id="book-author"></div>
@@ -43,7 +40,9 @@
       </div>
     </div>
 
-    <div class="book-review" id="book-review"></div>
+    <div class="book-review" id="book-review">
+      <p>Your review or notes go here. What did you think of it? What stayed with you? What would you tell a friend considering picking it up?</p>
+    </div>
   </main>
 </div>
 
@@ -62,16 +61,14 @@
   document.getElementById('book-title').textContent  = book.title;
   document.getElementById('book-author').textContent = book.author;
   document.getElementById('book-year').textContent   = book.year;
-  document.getElementById('book-pages').textContent  = book.pages;
-  document.getElementById('book-review').innerHTML   = book.review;
+  document.getElementById('book-pages').textContent  = book.pages ? book.pages + ' pages' : '—';
+  if (book.review) document.getElementById('book-review').innerHTML = book.review;
 
   const genreEl = document.getElementById('book-genre');
   genreEl.textContent = book.genre;
   genreEl.classList.add(book.genreClass);
 
-  document.getElementById('book-stars').innerHTML =
-    starsHTML(book.stars) +
-    `<span class="sr-only">${book.stars} out of 5</span>`;
+  document.getElementById('book-stars').innerHTML = starsDisplay(book.stars);
 </script>
 </body>
 </html>

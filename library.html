@@ -10,10 +10,7 @@
 
 <div class="site">
   <div id="header"></div>
-
-  <main>
-    <div id="library-content"></div>
-  </main>
+  <main id="library-content"></main>
 </div>
 
 <div class="site" id="footer-wrap"></div>
@@ -34,7 +31,7 @@
           <div class="book-author">${b.author}</div>
         </div>
         <span class="book-genre ${b.genreClass}">${b.genre}</span>
-        <div class="stars" aria-label="${b.stars} out of 5 stars">${starsHTML(b.stars)}</div>
+        <div class="stars" aria-label="${b.stars > 0 ? b.stars + ' out of 5 stars' : 'unrated'}">${starsDisplay(b.stars)}</div>
       </div>
     `).join('');
 

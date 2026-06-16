@@ -10,7 +10,6 @@
 
 <div class="site">
   <div id="header"></div>
-
   <main id="archive-content"></main>
 </div>
 
@@ -21,7 +20,6 @@
   document.getElementById('header').innerHTML      = headerHTML('archive');
   document.getElementById('footer-wrap').innerHTML = footerHTML();
 
-  // Group posts: year → month → posts[]
   const grouped = {};
   POSTS.forEach(p => {
     if (!grouped[p.year]) grouped[p.year] = {};
@@ -36,8 +34,7 @@
     const total  = months.reduce((sum, m) => sum + grouped[year][m].length, 0);
 
     const monthsHTML = months.map(month => {
-      const posts = grouped[year][month];
-      const postsHTML = posts.map(p => `
+      const postsHTML = grouped[year][month].map(p => `
         <div class="archive-post">
           <a href="article.html?slug=${p.slug}">→ ${p.title}</a>
           <span class="archive-post-date">${p.date}</span>
@@ -54,8 +51,7 @@
     return `
       <section class="archive-year" aria-label="${year}">
         <h2 class="archive-year-title">
-          ${year}
-          <span class="count-badge">${total}</span>
+          ${year} <span class="count-badge">${total}</span>
         </h2>
         ${monthsHTML}
       </section>

@@ -1,232 +1,178 @@
 /* =============================================
-   Art Wrecka — Site Data & Logic
+   Art Wrecka — Site Data & Shared Helpers
    ============================================= */
 
 const POSTS = [
   {
-    slug: "why-not-every-hobby-needs-to-be-productive",
-    title: "Why Not Every Hobby Needs to be Productive",
-    date: "Jun 2", month: "June", year: 2026,
-    excerpt: "In a world that relentlessly optimises for output, there's something quietly radical about picking up a hobby for no reason other than joy.",
+    slug: "ai-and-the-devaluation-of-art",
+    title: "AI and the Devaluation of Art",
+    subtitle: "What does art even mean these days?",
+    date: "Jun 16",
+    month: "June",
+    year: 2026,
+    excerpt: "Anyone can type a prompt and generate almost any image they want. So what is the value of art now?",
     readTime: "5 min read",
-    tags: ["creativity","productivity","offline life"],
+    tags: ["art", "AI", "creativity", "digital life"],
+    thumb: "images/art-devaluation.jpg",
     body: `
-      <p>In a world that relentlessly optimises for output, there's something quietly radical about picking up a hobby for no reason other than joy. We've internalised the logic of productivity so deeply that even our leisure time has become a side hustle, a portfolio piece, or a self-improvement project.</p>
-      <p>But hobbies didn't used to work this way. For most of human history, people made things — songs, carvings, gardens, bread — without expecting anything in return. The making was the point. The pleasure was in the process, not the outcome.</p>
-      <blockquote>The moment you start optimising a hobby, you've already missed the point of it.</blockquote>
-      <p>I started drawing last year with no plan to share it, sell it, or improve fast enough to impress anyone. Some weeks I'm terrible at it. Some weeks I forget. And none of that matters, because there's no metric by which this is being measured.</p>
-      <p>That's the radical part. In a culture obsessed with tracking, measuring, and improving, doing something purely for yourself — and keeping it that way — is almost an act of resistance.</p>
-      <p>So pick up the hobby. Play the instrument badly. Grow the lopsided tomatoes. Write the poem nobody will read. Let it be useless. That might be exactly what makes it worth doing.</p>
+      <p>There is little I can add that hasn't already been said about AI and its use in art. The general consensus seems to be that artists and creatives view it as a soulless, low-quality substitute, one built on the work of real artists. Meanwhile, corporations and casual users tend to embrace it, since they no longer need to pay an artist or designer to mass-produce posters, illustrations, and other visual content. Artificial intelligence has effectively lowered the barrier to entry to the ground: anyone can type a prompt and instantly generate almost any image they want.</p>
+      <p>Given that reality, who would choose to pursue art as a profession? Historically, it has always been an oversaturated, highly competitive, and poorly paid field. If it was already undervalued before AI, it seems even more so now — it's just a direct path to poverty. But AI affects many professions, and that is not really my concern here.</p>
+      <p>What interests me is how AI has changed the way we think about art itself. Digital artists are increasingly accused of using AI in their work, even when they insist they have not. Others are giving up on art altogether, convinced that the hobby has lost its meaning now that anyone can become an "artist" at the press of a button.</p>
+      <p>So what is the value of art? Why spend years learning through trial and error, investing countless hours into practice, when you can obtain a finished image instantly?</p>
+      <blockquote>Technically, anyone can generate AI slop. Not everyone can be an artist.</blockquote>
+      <p>A true artist remains an artist regardless of the tools available to them. Take away every brush, pencil, and tablet, and they will still find a way to create. They will draw in the dirt with a stick. If they do not have a stick, they will use their hands. Someone whose creative process depends entirely on AI may still have ideas, but without the AI they won't know how to bring those ideas into existence.</p>
+      <p>For an artist, the ability to think, adapt, and solve visual problems is essential. Those skills come only through practice, years of learning how to translate an idea from the imagination onto a blank page as faithfully as possible.</p>
+      <p>I have to admit that I have been reluctant to fully embrace digital art myself. AI systems feed on digital artwork so easily, and it is painful to be accused — especially by fellow artists — of using AI in a piece that may have taken dozens of hours to complete. I understand where that suspicion comes from, but it's still painful. I suppose art has never been practical. It has always demanded effort, sacrifice, and persistence.</p>
+      <p>Personally, I prefer traditional media. Every sketch and every mark carries weight. If you make a mistake, you cannot simply erase it, and that imperfection is part of its charm. When I create something on paper, no one can diminish the value of the hours invested in it. More importantly, no one can take away the manual and mental skills I develop with every drawing.</p>
+      <p>That, more than the final image, is where the true value of art lies.</p>
     `
   },
   {
-    slug: "the-slow-art-of-doing-nothing-well",
-    title: "The Slow Art of Doing Nothing Well",
-    date: "May 28", month: "May", year: 2026,
-    excerpt: "We've forgotten how to be bored. And boredom, it turns out, is where all the interesting thoughts live.",
+    slug: "fighting-back-google",
+    title: "Fighting back Google",
+    subtitle: "Tired of the internet being enshittified and now I have the attention span of a goldfish",
+    date: "Jun 9",
+    month: "June",
+    year: 2026,
+    excerpt: "Tired of the internet being enshittified, being spied on and having the attention span of a goldfish.",
     readTime: "4 min read",
-    tags: ["slowness","attention"],
-    body: `<p>We've forgotten how to be bored. And boredom, it turns out, is where all the interesting thoughts live. A meditation on stillness and what comes after.</p><p>Add your full article content here.</p>`
+    tags: ["internet", "privacy", "digital life", "offline"],
+    thumb: "images/enshittified.webp",
+    body: `
+      <p>No matter where you go, spaces that used to be nice now suck. It's not just nostalgia; for a very long time, the internet didn't work with algorithms, dynamic pricing, and you went there with a purpose, not out of boredom (even if the purpose in question was to find memes).</p>
+      <p>This has all been bugging me for a while. Dynamic pricing in particular and the urge to buy something before the price cranks up piss me off, but technically I'm doing this to myself since I accept the terms and conditions without reading them over and I've been letting cookies stack up to the point Google knows pretty much everything about me.</p>
+      <p>But I'm changing that. I'm "degoogling" my life.</p>
+      <figure class="article-image">
+        <img src="images/cookies.webp" alt="For some reason, they keep offering me cookies">
+        <figcaption>For some reason, they keep offering me cookies</figcaption>
+      </figure>
+      <p>Honestly, I knew it'd be a lot of work, but it wasn't as bad as I thought. I traded Gmail for Proton Mail, and swapped Google for Brave. I also ditched most of my social media or added major barriers to using it on my phone, so I'm forced to use a computer (which decreases the chances of doomscrolling). As far as that goes, I've made doomscrolling less appealing by curating my feed. This worked great with Reddit. I started browsing anonymously, so without the algorithm giving me the most optimal feed, I was significantly less prone to keep scrolling.</p>
+      <p>Essentially, I made it so going on my phone or my computer was something I did for a purpose and not out of boredom. I'm not trying to eliminate social media and surfing the web from my life, just trying to be more intentional.</p>
+      <figure class="article-image">
+        <img src="images/enshittified.webp" alt="The internet has been enshittified">
+      </figure>
+      <p>I've been doing this for a few weeks and I've found myself more inspired to do other things. I've completed my reading list early, am now exceeding WHO's weekly exercise recommendations daily, worked on drawings, and even started tinkering with my PC to host my own AI for privacy and ethical reasons. To protect my own privacy, I'm being responsible, as I'm sure many would dislike their ChatGPT conversations being made public.</p>
+      <p>This all sounds great on paper, but it's very challenging. I kept hearing how bad social media was for attention span, but I really thought it was an exaggeration. It wasn't until I started reading that I noticed I had a constant urge to check my phone after reading a single page. My brain kept drifting, and I had to read the same thing over and over…</p>
+      <figure class="article-image">
+        <img src="images/sleep.webp" alt="What is sleep?">
+        <figcaption>I doomscroll late at night more often than I'd like</figcaption>
+      </figure>
+      <p>I wonder if the increase in ADHD is because of this, and whether sometimes it can be both acquired and reversed. Although I've seen a slight improvement, I know it will probably take months to get back my old attention span. I'm a bit ashamed to admit that my 8yo self had a significantly longer attention span than I do now. But hey, it's a work in progress.</p>
+    `
   },
   {
-    slug: "sketchbooks-are-not-portfolios",
-    title: "Sketchbooks Are Not Portfolios",
-    date: "May 15", month: "May", year: 2026,
-    excerpt: "Your sketchbook is a thinking space, not a gallery. The moment you start performing for an imagined audience, you lose the very thing that makes it useful.",
-    readTime: "4 min read",
-    tags: ["creativity","drawing"],
-    body: `<p>Your sketchbook is a thinking space, not a gallery. The moment you start performing for an imagined audience, you lose the very thing that makes it useful.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "on-making-things-nobody-will-see",
-    title: "On Making Things Nobody Will See",
-    date: "May 3", month: "May", year: 2026,
-    excerpt: "Some of my best work has never been shared. Is that a waste, or the purest form of creative practice?",
-    readTime: "3 min read",
-    tags: ["creativity","privacy"],
-    body: `<p>Some of my best work has never been shared. Is that a waste, or the purest form of creative practice? A short essay on invisible output.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "reading-offline-notes-from-a-digital-detox",
-    title: "Reading Offline: Notes from a Digital Detox",
-    date: "Apr 22", month: "April", year: 2026,
-    excerpt: "Thirty days without Twitter, Reddit, or RSS. What I read instead, what I noticed, and why I haven't fully gone back.",
-    readTime: "6 min read",
-    tags: ["offline life","reading"],
-    body: `<p>Thirty days without Twitter, Reddit, or RSS. What I read instead, what I noticed, and why I haven't fully gone back.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "the-myth-of-the-inspired-artist",
-    title: "The Myth of the Inspired Artist",
-    date: "Apr 10", month: "April", year: 2026,
-    excerpt: "Inspiration is overrated. Most great work is the product of showing up on the uninspired days.",
-    readTime: "5 min read",
-    tags: ["creativity","process"],
-    body: `<p>Inspiration is overrated. Most great work is the product of showing up on the uninspired days — the ones where you'd rather do absolutely anything else.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "what-birdwatching-taught-me-about-attention",
-    title: "What Birdwatching Taught Me About Attention",
-    date: "Mar 29", month: "March", year: 2026,
-    excerpt: "I started birdwatching as a joke. Six months later I own binoculars and a field notebook.",
-    readTime: "5 min read",
-    tags: ["attention","nature","slowness"],
-    body: `<p>I started birdwatching as a joke. Six months later I own binoculars and a field notebook. Here's what slow, patient observation has done for my other creative work.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "in-defence-of-the-unfinished-project",
-    title: "In Defence of the Unfinished Project",
-    date: "Mar 12", month: "March", year: 2026,
-    excerpt: "Half-finished novels, abandoned paintings, a guitar that gathers dust. Maybe these aren't failures.",
-    readTime: "4 min read",
-    tags: ["creativity","process"],
-    body: `<p>Half-finished novels, abandoned paintings, a guitar that gathers dust. Maybe these aren't failures. Maybe they're evidence of a curious, restless mind.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "analog-tools-in-a-digital-world",
-    title: "Analog Tools in a Digital World",
-    date: "Feb 27", month: "February", year: 2026,
-    excerpt: "Fountain pens, index cards, printed books. There's a quiet resistance in choosing tools that don't ping you.",
-    readTime: "4 min read",
-    tags: ["tools","offline life"],
-    body: `<p>Fountain pens, index cards, printed books. There's a quiet resistance in choosing tools that don't ping you. A look at why physicality still matters for thinking.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "how-i-learned-to-sit-with-bad-work",
-    title: "How I Learned to Sit With Bad Work",
-    date: "Feb 11", month: "February", year: 2026,
-    excerpt: "For years I deleted anything I wasn't proud of. Here's what I lost by doing that.",
-    readTime: "5 min read",
-    tags: ["creativity","process"],
-    body: `<p>For years I deleted anything I wasn't proud of. Here's what I lost by doing that, and how making peace with mediocrity unlocked something I didn't expect.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "community-vs-audience",
-    title: "Community vs Audience: A Creator's Dilemma",
-    date: "Jan 30", month: "January", year: 2026,
-    excerpt: "An audience consumes. A community participates. The distinction sounds subtle until you're building something.",
-    readTime: "5 min read",
-    tags: ["community","creativity"],
-    body: `<p>An audience consumes. A community participates. The distinction sounds subtle until you're building something and realise which one you actually want around you.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "the-case-for-a-personal-library",
-    title: "The Case for a Personal Library",
-    date: "Jan 14", month: "January", year: 2026,
-    excerpt: "Physical bookshelves are out of fashion. I'm doubling down anyway.",
-    readTime: "4 min read",
-    tags: ["books","reading"],
-    body: `<p>Physical bookshelves are out of fashion. I'm doubling down anyway. Why owning books — not just reading them — has changed how I think and who I am.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "resting-without-guilt",
-    title: "Resting Without Guilt",
-    date: "Dec 20", month: "December", year: 2025,
-    excerpt: "Why is doing nothing so hard? A short reflection on rest as a creative act.",
-    readTime: "3 min read",
-    tags: ["slowness","wellbeing"],
-    body: `<p>Why is doing nothing so hard? A short reflection on rest as a creative act, and the cultural guilt we carry around leisure.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "notebooks-i-have-loved",
-    title: "Notebooks I Have Loved",
-    date: "Dec 5", month: "December", year: 2025,
-    excerpt: "A deeply personal tour through the journals that shaped how I think.",
-    readTime: "5 min read",
-    tags: ["tools","stationery"],
-    body: `<p>A deeply personal tour through the journals that shaped how I think: from school copybooks to dot-grid Leuchtturms and everything in between.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "five-books-that-changed-how-i-see",
-    title: "Five Books That Changed How I See",
-    date: "Nov 19", month: "November", year: 2025,
-    excerpt: "Not life-changing in the motivational sense — more like they quietly rearranged the furniture of my mind.",
-    readTime: "6 min read",
-    tags: ["books","reading"],
-    body: `<p>Not life-changing in the motivational sense — more like they quietly rearranged the furniture of my mind. A reading list with context.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "on-being-a-beginner-again",
-    title: "On Being a Beginner Again",
-    date: "Nov 4", month: "November", year: 2025,
-    excerpt: "I picked up watercolour at 32. Being genuinely bad at something — and continuing anyway — turns out to be one of the most freeing experiences available.",
-    readTime: "4 min read",
-    tags: ["creativity","learning"],
-    body: `<p>I picked up watercolour at 32. Being genuinely bad at something — and continuing anyway — turns out to be one of the most freeing experiences available.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "the-internet-archive-and-memory",
-    title: "The Internet Archive and Memory",
-    date: "Oct 22", month: "October", year: 2025,
-    excerpt: "The web forgets things at a terrifying pace. A look at digital preservation and ephemeral content.",
-    readTime: "5 min read",
-    tags: ["internet","memory"],
-    body: `<p>The web forgets things at a terrifying pace. A look at digital preservation, ephemeral content, and what it means to build something online that lasts.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "slow-mornings-as-creative-infrastructure",
-    title: "Slow Mornings as Creative Infrastructure",
-    date: "Oct 8", month: "October", year: 2025,
-    excerpt: "The first hour of the day is not for email. Here's the morning rhythm I've built over two years.",
-    readTime: "5 min read",
-    tags: ["routine","creativity"],
-    body: `<p>The first hour of the day is not for email. Here's the morning rhythm I've built over two years, and why protecting it changed everything about how I work.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "against-optimisation",
-    title: "Against Optimisation",
-    date: "Sep 22", month: "September", year: 2025,
-    excerpt: "We've applied the logic of efficiency to too many parts of life. Some things are not supposed to be optimised.",
-    readTime: "4 min read",
-    tags: ["productivity","slowness"],
-    body: `<p>We've applied the logic of efficiency to too many parts of life. Some things — friendships, art, meals, walks — are not supposed to be optimised.</p><p>Add your full article content here.</p>`
-  },
-  {
-    slug: "what-drawing-does-for-my-brain",
-    title: "What Drawing Does for My Brain",
-    date: "Sep 7", month: "September", year: 2025,
-    excerpt: "I'm not a good draughtsperson. But drawing daily — even badly — has quietly become the most important thinking tool in my kit.",
-    readTime: "4 min read",
-    tags: ["drawing","creativity"],
-    body: `<p>I'm not a good draughtsperson. But drawing daily — even badly — has quietly become the most important thinking tool in my kit. Here's what I've noticed.</p><p>Add your full article content here.</p>`
+    slug: "why-not-every-hobby-needs-to-be-productive",
+    title: "Why Not Every Hobby Needs to be Productive",
+    subtitle: "In 25 seconds, learn the brief story of Grog",
+    date: "Jun 2",
+    month: "June",
+    year: 2026,
+    excerpt: "In 25 seconds, learn the brief story of Grog — and why 10,000 years later we still remember his paintings.",
+    readTime: "2 min read",
+    tags: ["creativity", "hobbies", "productivity", "offline life"],
+    thumb: "images/grog-cover.webp",
+    video: "images/grog.mp4",
+    body: `
+      <p>And guess what? 10,000 years later, we don't know who the best hunter in the tribe was, but we do remember Grog's paintings.</p>
+    `
   }
 ];
 
 const BOOKS = [
-  { slug: "das-cafe-ohne-namen", year: 2026, title: "Das Café ohne Namen", author: "Robert Seethaler", genre: "Historical Fiction", genreClass: "genre-hist", stars: 3, pages: 192,
-    review: `<p>A quiet, melancholy novel set in a Viennese café. Seethaler writes with great restraint — every sentence carries more weight than it lets on.</p><p>Three stars feels almost unfair given how beautifully it's written, but the plot is slim and the ending left me wanting more. That said, the atmosphere alone makes it worth the afternoon it takes to read.</p>` },
-  { slug: "everything-is-tuberculosis", year: 2026, title: "Everything Is Tuberculosis", author: "John Green", genre: "Science", genreClass: "genre-sci", stars: 4, pages: 288,
-    review: `<p>A surprisingly compelling look at how one disease shaped history. Green writes science with warmth and accessibility — this isn't textbook stuff.</p><p>Add your notes here.</p>` },
-  { slug: "how-to-love", year: 2026, title: "How to Love", author: "Thich Nhat Hanh", genre: "Philosophy", genreClass: "genre-phil", stars: 5, pages: 128,
-    review: `<p>One of the most quietly transformative books I've read. Each page is a single thought, given room to breathe. Hanh makes philosophy feel like a natural part of being alive rather than an academic exercise.</p><p>Add your notes here.</p>` },
-  { slug: "void", year: 2026, title: "Void", author: "Veronika Roth", genre: "Science Fiction", genreClass: "genre-scifi", stars: 3, pages: 352,
-    review: `<p>Fast-moving and fun, but ultimately less interesting than the premise suggested. Add your notes here.</p>` },
-  { slug: "vera-wongs-unsolicited-advice-for-murderers", year: 2026, title: "Vera Wong's Unsolicited Advice for Murderers", author: "Jesse Q. Sutanto", genre: "Mystery", genreClass: "genre-myst", stars: 3, pages: 320,
-    review: `<p>Charming, cosy mystery with a very specific energy. Vera Wong is a wonderful character. Add your notes here.</p>` },
-  { slug: "die-chronistin-der-meere", year: 2026, title: "Die Chronistin der Meere", author: "Patrik Svensson", genre: "Science", genreClass: "genre-sci", stars: 3, pages: 240,
-    review: `<p>A lyrical take on the natural world. Svensson writes beautifully but the science occasionally gets lost in the prose. Add your notes here.</p>` },
-  { slug: "all-about-love", year: 2026, title: "All About Love", author: "bell hooks", genre: "Philosophy", genreClass: "genre-phil", stars: 3, pages: 256,
-    review: `<p>Important ideas, earnestly delivered. Some sections landed harder than others but the core argument about love as a practice rather than a feeling is one I keep returning to. Add your notes here.</p>` },
-  { slug: "stoner", year: 2025, title: "Stoner", author: "John Williams", genre: "Fiction", genreClass: "genre-fic", stars: 5, pages: 278,
-    review: `<p>One of the great novels of the 20th century. Devastating in the quietest possible way. Add your notes here.</p>` },
-  { slug: "devotions", year: 2025, title: "Devotions", author: "Mary Oliver", genre: "Philosophy", genreClass: "genre-phil", stars: 5, pages: 432,
-    review: `<p>A life's work of poetry collected in one volume. Keep this by your bed. Add your notes here.</p>` },
-  { slug: "piranesi", year: 2025, title: "Piranesi", author: "Susanna Clarke", genre: "Fiction", genreClass: "genre-fic", stars: 4, pages: 272,
-    review: `<p>Utterly strange and utterly wonderful. Clarke builds a world that feels both completely impossible and entirely real. Add your notes here.</p>` },
-  { slug: "when-breath-becomes-air", year: 2025, title: "When Breath Becomes Air", author: "Paul Kalanithi", genre: "Biography", genreClass: "genre-bio", stars: 5, pages: 228,
-    review: `<p>I finished this on a train and sat very still for a long time afterwards. Required reading. Add your notes here.</p>` },
-  { slug: "four-thousand-weeks", year: 2025, title: "Four Thousand Weeks", author: "Oliver Burkeman", genre: "Self-help", genreClass: "genre-self", stars: 4, pages: 288,
-    review: `<p>The anti-productivity productivity book. Burkeman argues convincingly that the problem isn't how you manage your time — it's that you have almost none of it. Clarifying and slightly terrifying. Add your notes here.</p>` },
-  { slug: "the-ministry-for-the-future", year: 2025, title: "The Ministry for the Future", author: "Kim Stanley Robinson", genre: "Science Fiction", genreClass: "genre-scifi", stars: 4, pages: 576,
-    review: `<p>Ambitious, sprawling, and sometimes slow — but the ideas are worth the effort. KSR imagines climate solutions in concrete, institutional detail. Add your notes here.</p>` }
+  {
+    slug: "gifts-of-imperfection",
+    year: 2026, title: "The Gifts of Imperfection", author: "Brené Brown",
+    genre: "Self-help", genreClass: "genre-self", stars: 4, pages: 160,
+    review: `<p>Loved the book — it's a gentle reminder that you're worthy and that perfection isn't required. I found it very insightful to read about how society's expectations taint our own expectations for ourselves, and how to fight back to live an authentic life. It definitely challenged my people-pleaser tendencies.</p>`
+  },
+  {
+    slug: "the-alchemist",
+    year: 2026, title: "The Alchemist", author: "Paulo Coelho",
+    genre: "Fiction", genreClass: "genre-fic", stars: 3.5, pages: 208,
+    review: `<p>Read the book when I was going through a rough patch and found it immensely inspiring — a bit cliché, but it's about the journey and not the destination. The latter part of the book gets a bit too fictional for my liking, but overall I think it has a very positive message. It feels a bit like self-help disguised as a fantasy story.</p>`
+  },
+  {
+    slug: "atomic-habits",
+    year: 2026, title: "Atomic Habits", author: "James Clear",
+    genre: "Self-help", genreClass: "genre-self", stars: 4, pages: 320,
+    review: `<p>Enjoyable book and straight to the point. It explains the science of habit formation and offers helpful information on how to change habits and replace them with healthier ones.</p>`
+  },
+  {
+    slug: "the-pivot-year",
+    year: 2026, title: "The Pivot Year", author: "Brianna Wiest",
+    genre: "Self-help", genreClass: "genre-self", stars: 3, pages: 224,
+    review: `<p>I didn't read it quite as intended, but even if I had the statements are too generic to provide real help. Essentially it's a paper newsletter with daily motivation.</p>`
+  },
+  {
+    slug: "101-essays",
+    year: 2026, title: "101 Essays That Will Change the Way You Think", author: "Brianna Wiest",
+    genre: "Philosophy", genreClass: "genre-phil", stars: 4.5, pages: 348,
+    review: `<p>I was impressed by some of the essays — they talk about a wide variety of topics, from science to politics with an impressive amount of expertise. I feel like I could have kept reading 101 more essays!</p>`
+  },
+  {
+    slug: "tao-te-ching",
+    year: 2026, title: "Tao Te Ching", author: "Lao Tzu",
+    genre: "Philosophy", genreClass: "genre-phil", stars: 3.5, pages: 112,
+    review: `<p>Short and sweet — the foundational work of Taoism. I found it a good introduction to Chinese philosophy and religious practice, very focused on harmony, simplicity, and living with humility and letting the universe take its course.</p>`
+  },
+  {
+    slug: "ichigo-ichie",
+    year: 2026, title: "Ichigo Ichie", author: "Héctor García",
+    genre: "Philosophy", genreClass: "genre-phil", stars: 4.5, pages: 224,
+    review: `<p>Enjoyable book that reminds us to live in the moment and be more present. I appreciated the Japanese philosophy aspect — in Western philosophy we have 'memento mori' which sounds a lot darker than the cheerful Ichigo Ichie. Lots of good tips to clear the mind and stay present.</p>`
+  },
+  {
+    slug: "five-love-languages",
+    year: 2026, title: "The 5 Love Languages", author: "Gary Chapman",
+    genre: "Self-help", genreClass: "genre-self", stars: 4, pages: 208,
+    review: `<p>I was familiar with the premise of the book and it didn't disappoint. It offers an in-depth analysis of the most common ways people express love and how having different love languages can impact a relationship — and of course, advice on how to overcome it and live in harmony. I would recommend this book to anyone in a long-term relationship.</p>`
+  },
+  {
+    slug: "outlive",
+    year: 2026, title: "Outlive", author: "Peter Attia",
+    genre: "Health", genreClass: "genre-health", stars: 3.5, pages: 496,
+    review: `<p>It's a very good book, very factual. I couldn't quite get into it because it's a bit too scientific for my liking — it shows the entire research rather than the outcome. Some people might appreciate that, but if you want something that goes straight to the point, this isn't it. Still, the book confirms what common evidence suggests: exercise, diet and sleep are fundamental markers for longevity, but everyone is wired differently and it's an individual's job to find what works best for them.</p>`
+  },
+  {
+    slug: "spirit-of-shinto",
+    year: 2026, title: "The Spirit of Shinto", author: "Héctor García",
+    genre: "Philosophy", genreClass: "genre-phil", stars: 3, pages: 192,
+    review: `<p>A short introductory book to Shintoism. Shinto coexists with Buddhism in Japan and it's interesting to read about the origins. My main complaint is that it only offers a superficial level of depth — it's enough to prepare for a quick trip to Japan, but I'd recommend further reading for anyone seriously interested in learning more about the religion.</p>`
+  },
+  {
+    slug: "mans-search-for-meaning",
+    year: 2026, title: "Man's Search for Meaning", author: "Viktor E. Frankl",
+    genre: "Psychology", genreClass: "genre-psych", stars: 5, pages: 165,
+    review: `<p>I don't give 5 stars to just any book, but Man's Search for Meaning genuinely brought me to tears. The author's narration is very immersive and it makes you empathize with every single person he encounters during his journey. Clinging to hope, having dreams despite having nothing... it was a lot, but it's one of those books that keeps you up at night thinking about what you'd have done in that situation.</p><p>The first part of the book is a recollection of the author's time in a concentration camp during WW2, whereas the second part goes into the psychological effects and research.</p>`
+  },
+  {
+    slug: "enshittification",
+    year: 2026, title: "Enshittification", author: "Cory Doctorow",
+    genre: "Non-fiction", genreClass: "genre-sci", stars: 4.5, pages: 288,
+    review: `<p>After reading this, I decided to 'DeGoogle' my life and rebelled against big companies. The book explains capitalism and the phenomenon of enshittification with a healthy dose of dark humour and academic research, as well as some economics and political science. I found the book made me think about consumerism from a different lens and seriously consider whether I want to stay a cog in the system or go against it and not let companies influence my shopping habits.</p>`
+  },
+  {
+    slug: "courage-to-be-disliked",
+    year: 2026, title: "The Courage to Be Disliked", author: "Ichiro Kishimi",
+    genre: "Psychology", genreClass: "genre-psych", stars: 4, pages: 288,
+    review: `<p>Hear me out. It's a great book, written like a philosophical dialogue between a philosopher and a young man. It introduces Adlerian psychology well — the problem is that some of the dialogues are infuriating to read. Perhaps I can relate more to the young man, but some of the statements the philosopher makes are alarming at first glance.</p><p>One example: he states that trauma doesn't exist. Alarming, right? But then he elaborates that traditional Freudian psychology claims that one's past determines their future (bad childhood → trauma → bad adulthood), while Adlerian psychology claims your past doesn't control you — it shapes you, and it's up to you what you make of it and how you use it to move forward. Denying trauma feels like insulting rage bait, but explaining that trauma can be shaped into something positive and doesn't have to dictate your life makes a lot more sense. Still, I found the rage bait very annoying to get past, which docks a full star from an otherwise excellent book.</p>`
+  },
 ];
 
-// ── Helpers ──────────────────────────────────────────────────────────────
+// ── Helpers ─────────────────────────────────────────────────────────────
 
-function starsHTML(n) {
-  return Array.from({ length: 5 }, (_, i) =>
-    `<span class="star${i >= n ? ' off' : ''}">★</span>`
-  ).join('');
+const YT_URL = "https://youtube.com/@theartwrecker?si=7EGA304e4gyEdEJ8";
+
+function starsDisplay(n) {
+  if (n === 0) return `<span style="font-size:12px;color:var(--text-tertiary)">—</span>`;
+  const full  = Math.floor(n);
+  const half  = n % 1 >= 0.5;
+  const empty = 5 - full - (half ? 1 : 0);
+  let html = '';
+  for (let i = 0; i < full;  i++) html += `<span class="star">★</span>`;
+  if (half)                        html += `<span class="star half">★</span>`;
+  for (let i = 0; i < empty; i++) html += `<span class="star off">★</span>`;
+  return html;
 }
 
 function thumbSVG() {
@@ -237,20 +183,22 @@ function thumbSVG() {
   </svg>`;
 }
 
-function sidebarHTML(activeSlug) {
+function sidebarHTML() {
   const latest = POSTS.slice(0, 5).map(p =>
     `<li><a href="article.html?slug=${p.slug}">${p.title}</a></li>`
   ).join('');
 
   return `
-    <div class="sidebar-avatar" aria-hidden="true">L</div>
+    <div class="sidebar-avatar">
+      <img src="images/avatar.jpg" alt="Art Wrecker avatar">
+    </div>
     <div class="sidebar-name">Art Wrecker</div>
-    <div class="sidebar-bio">I decided to start living offline a bit more, and it turns out I get a lot of things done!</div>
+    <div class="sidebar-bio">Documenting my <a href="${YT_URL}" target="_blank" rel="noopener" class="bio-link">art journey</a> and sharing my random ramblings</div>
     <div class="sidebar-section">
       <div class="sidebar-heading">Offline Counter</div>
       <div class="counter-row">
-        <div class="counter-item"><strong>12</strong><span class="counter-label">articles</span></div>
-        <div class="counter-item"><strong>6</strong><span class="counter-label">videos</span></div>
+        <div class="counter-item"><strong>3</strong><span class="counter-label">articles</span></div>
+        <div class="counter-item"><strong>8</strong><span class="counter-label">videos</span></div>
         <div class="counter-item"><strong>13</strong><span class="counter-label">books read</span></div>
       </div>
     </div>
@@ -262,17 +210,21 @@ function sidebarHTML(activeSlug) {
 }
 
 function headerHTML(activePage) {
-  const pages = ['blog', 'library', 'archive'];
+  const YT = YT_URL;
+  const pages  = ['blog', 'library', 'archive'];
   const labels = { blog: 'Blog', library: 'Library', archive: 'Archive' };
   const hrefs  = { blog: 'index.html', library: 'library.html', archive: 'archive.html' };
   return `
     <header class="site-header">
-      <div class="site-title">Art Wrecka</div>
+      <a href="index.html" class="site-logo-link">
+        <img src="images/header.gif" alt="Art Wrecka" class="site-logo-gif">
+      </a>
     </header>
     <nav class="site-nav" aria-label="Main navigation">
       ${pages.map(p =>
         `<a href="${hrefs[p]}"${activePage === p ? ' class="active" aria-current="page"' : ''}>${labels[p]}</a>`
       ).join('')}
+      <a href="${YT}" target="_blank" rel="noopener" class="nav-external">YouTube ↗</a>
     </nav>
   `;
 }
@@ -285,6 +237,7 @@ function footerHTML() {
         <a href="index.html">Blog</a>
         <a href="library.html">Library</a>
         <a href="archive.html">Archive</a>
+        <a href="${YT_URL}" target="_blank" rel="noopener">YouTube ↗</a>
       </nav>
       <span>Last updated June 2026</span>
     </footer>

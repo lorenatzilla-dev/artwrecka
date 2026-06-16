@@ -13,29 +13,16 @@
 
   <main>
     <div class="layout">
-      <!-- Article column -->
       <div>
-        <a class="article-back" href="javascript:history.back()">← Back to blog</a>
-
-        <div class="article-hero" id="article-hero" aria-hidden="true">
-          <!-- Replace with: <img src="your-image.jpg" alt="Description of image"> -->
-          <svg width="120" height="100" viewBox="0 0 120 100" fill="none" aria-hidden="true">
-            <rect x="10" y="10" width="100" height="80" rx="6" fill="currentColor"/>
-            <circle cx="40" cy="36" r="12" fill="white"/>
-            <path d="M10 70 L36 44 L56 64 L76 40 L110 76" stroke="white" stroke-width="4" fill="none"/>
-          </svg>
-        </div>
-
+        <a class="article-back" href="index.html">← Back to blog</a>
+        <div class="article-hero" id="article-hero"></div>
         <div class="article-header-meta" id="article-meta"></div>
         <h1 class="article-title" id="article-title"></h1>
+        <div class="article-subtitle" id="article-subtitle"></div>
         <div class="article-body" id="article-body"></div>
         <div class="article-tags" id="article-tags"></div>
       </div>
-
-      <!-- Separator -->
       <div class="col-sep" aria-hidden="true"></div>
-
-      <!-- Sidebar -->
       <aside class="sidebar" aria-label="About and recent posts">
         <div id="sidebar"></div>
       </aside>
@@ -53,15 +40,28 @@
   document.title = `Art Wrecka — ${post.title}`;
 
   document.getElementById('header').innerHTML      = headerHTML('blog');
-  document.getElementById('sidebar').innerHTML     = sidebarHTML(post.slug);
+  document.getElementById('sidebar').innerHTML     = sidebarHTML();
   document.getElementById('footer-wrap').innerHTML = footerHTML();
 
-  document.getElementById('article-meta').textContent =
-    `${post.date} · Art Wrecka · ${post.readTime}`;
-  document.getElementById('article-title').textContent = post.title;
-  document.getElementById('article-body').innerHTML    = post.body;
+  // Hero: cover image first, then video inline in body if present, else plain thumb
+  const heroEl = document.getElementById('article-hero');
+  if (post.thumb) {
+    heroEl.innerHTML = `<img src="${post.thumb}" alt="${post.title}">`;
+  } else {
+    heroEl.style.display = 'none';
+  }
+  // If there's a video, inject it at the top of the body
+  if (post.video) {
+    post.body = `<div class="article-image" style="margin-bottom:1.25rem">
+      <video src="${post.video}" controls playsinline style="width:100%;border-radius:8px;display:block"></video>
+    </div>` + post.body;
+  }
 
-  document.getElementById('article-tags').innerHTML = post.tags.map(t =>
+  document.getElementById('article-meta').textContent   = `${post.date} · Art Wrecka · ${post.readTime}`;
+  document.getElementById('article-title').textContent  = post.title;
+  document.getElementById('article-subtitle').textContent = post.subtitle || '';
+  document.getElementById('article-body').innerHTML     = post.body;
+  document.getElementById('article-tags').innerHTML     = post.tags.map(t =>
     `<span class="article-tag">${t}</span>`
   ).join('');
 </script>
