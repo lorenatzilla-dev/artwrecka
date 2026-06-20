@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Wrecka — About</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="site">
+  <div id="header"></div>
+
+  <main>
+    <div class="about-grid">
+      <div class="about-avatar-wrap">
+        <img src="images/avatar.jpg" alt="Art Wrecker avatar" class="about-avatar">
+      </div>
+      <div class="about-text">
+        <h1 class="about-heading">About</h1>
+        <p>Art Wrecker is my personal creative playground, a place where I document my journey as an artist through YouTube videos, blog posts, and ongoing art experiments across different mediums.</p>
+        <p>This project is part journal, part sketchbook, and part public accountability device. My goal is to share my progression, mistakes and experimentation with art. I want to inspire aspiring artists to keep creating regardless of their skill level.</p>
+        <p>I'm figuring it out as I go. You're welcome to follow along.</p>
+        <p><a href="https://youtube.com/@theartwrecker?si=7EGA304e4gyEdEJ8" target="_blank" rel="noopener" class="about-yt-link">Follow my journey here! ↗</a></p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="site" id="footer-wrap"></div>
+
+<script src="js/data.js"></script>
+<script>
+  document.getElementById('header').innerHTML      = headerHTML('about');
+  document.getElementById('footer-wrap').innerHTML = footerHTML();
+  initCookieBanner();
+</script>
+</body>
+</html>

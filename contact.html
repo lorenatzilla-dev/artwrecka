@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Wrecka — Contact</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="site">
+  <div id="header"></div>
+
+  <main class="simple-page">
+    <h1 class="simple-page-title">Contact</h1>
+    <p class="simple-page-intro">Got a question, a collab idea, or just want to say hi? Fill in the form below or drop me an email at <a href="mailto:theartwrecker@gmail.com">theartwrecker@gmail.com</a>.</p>
+
+    <div class="tally-wrap">
+      <iframe
+        data-tally-src="https://tally.so/embed/jaE8N9?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="400"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Contact form"
+        id="tally-frame"
+      ></iframe>
+    </div>
+  </main>
+</div>
+
+<div class="site" id="footer-wrap"></div>
+
+<script src="js/data.js"></script>
+<script>
+  document.getElementById('header').innerHTML      = headerHTML('');
+  document.getElementById('footer-wrap').innerHTML = footerHTML();
+  initCookieBanner();
+</script>
+<!-- Tally dynamic height script -->
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+</body>
+</html>

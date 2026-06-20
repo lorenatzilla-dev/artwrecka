@@ -23,6 +23,7 @@
 <script>
   document.getElementById('header').innerHTML      = headerHTML('archive');
   document.getElementById('footer-wrap').innerHTML = footerHTML();
+  initCookieBanner();
 
   const grouped = {};
   POSTS.forEach(p => {

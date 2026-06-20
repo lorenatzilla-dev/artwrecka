@@ -23,6 +23,7 @@
 <script>
   document.getElementById('header').innerHTML      = headerHTML('library');
   document.getElementById('footer-wrap').innerHTML = footerHTML();
+  initCookieBanner();
 
   const years = [...new Set(BOOKS.map(b => b.year))].sort((a, b) => b - a);
 

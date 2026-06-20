@@ -44,6 +44,7 @@
   document.getElementById('header').innerHTML      = headerHTML('blog');
   document.getElementById('sidebar').innerHTML     = sidebarHTML();
   document.getElementById('footer-wrap').innerHTML = footerHTML();
+  initCookieBanner();
 
   const start = (page - 1) * PER_PAGE;
   const slice = POSTS.slice(start, start + PER_PAGE);
