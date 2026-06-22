@@ -4,6 +4,43 @@
 
 const POSTS = [
   {
+    slug: "epicureanism",
+    title: "Philosophy gurus completely missed this one",
+    subtitle: "On Epicureanism — and why I think it's vastly superior to stoicism",
+    date: "Jun 22",
+    month: "June",
+    year: 2026,
+    excerpt: "Ever since Covid there's been a philosophy renaissance. Everyone discovered stoicism. Almost nobody discovered Epicureanism. That's a shame.",
+    readTime: "7 min read",
+    tags: ["philosophy", "epicureanism", "stoicism", "lifestyle"],
+    thumb: "images/epicureanism.jpg",
+    body: `
+      <p><em>Please note this is all my interpretation of the texts and a personal opinion — you don't have to agree with it.</em></p>
+
+      <p>I believe that ever since Covid-19, there's been a bit of a renaissance in many creative and intellectual fields including philosophy. The manosphere in particular seems to have adopted stoicism, or at least some parts of it. The actual stoic community refers to this as "brocism," calling it shallow and misused. The original stoicism (very simplified) encourages people to focus on the things within their control, and to master emotions so whenever they have a hard choice to make they can act with logic and wisdom, not out of emotion in the heat of the moment. That doesn't sound bad, does it? It encourages moderation, self-respect and adaptability.</p>
+
+      <p>Some parts of the manosphere, however, have appropriated the philosophy and twisted it into something else. With brocism, learning emotional regulation becomes "if you show sadness, anxiety or vulnerability you're weak," which leads to emotional suppression. Then there's the focus on ambition: being an alpha lone wolf and chasing money, outdoing everyone else, becoming a top 10% man. This take on stoicism makes me cringe — it rationalizes being selfish, materialistic and believing you're above others, whereas originally stoicism taught humility, self-awareness and kindness.</p>
+
+      <p>If you don't know what I'm talking about, remember when the church somehow justified burning people alive as a virtuous thing to do back in the middle ages? If one goes through actual religious texts, neither the Old nor the New Testament mention witches should be burned alive. It talks about sorcerers, necromancers and poisoners — not your average wicca lady that knows a bit about medicinal herbs. The New Covenant focuses on grace, forgiveness and spiritual warfare rather than physical execution, so technically the church didn't have a way to actually justify that.</p>
+
+      <p>What does the church have to do with stoicism? A big part of why stoic texts have survived to this day is because the early Christian Church preserved Stoic philosophy — its core principles were compatible with Christianity (temperance, humility, justice, acceptance of the divine) and that made it more appealing for pagan Romans transitioning to Christianity.</p>
+
+      <p>All of this yapping is just the context you need to understand another philosophy. One that in my opinion is vastly superior to stoicism. I'm talking about <strong>Epicureanism</strong>. The premise is simple: it advocates for simple living, deep friendships and the removal of fear and pain. Pleasure and occasional indulgence are seen as positive things that contribute to our mental and physical wellbeing. What triggered the Church is that Epicureans believed human suffering comes from the fear of death and gods — they claimed gods are indifferent to humanity and that death is nothing but our body and soul disintegrating into atoms. No afterlife required.</p>
+
+      <blockquote>Epicurus believed that in order to be happy we need to lead simple, low-stress lives — achieved with healthy amounts of pleasure, a close community, and no fear of divine punishment.</blockquote>
+
+      <p>The Church mischaracterised this as a doctrine of gluttony and unrestrained sensual indulgence. The truth is, Epicurus advocated for a minimalist lifestyle, keeping only what's necessary and having the occasional treat. Food, water and shelter were essential; small luxuries like exotic foods were acceptable in moderation. What Epicureanism warns against are the unnatural desires — fame, wealth, power — because those are limitless, insatiable and lead to anxiety.</p>
+
+      <p>At its core, he believed humans could achieve <em>ataraxia</em> (freedom from mental distress) through good friends, family, good conversations, enjoying a good meal. Always avoiding the chase for money and power.</p>
+
+      <p>Epicureanism and Stoicism share some similarities, but they're quite different in outcome. Stoicism encourages duty and forcing yourself to do things you don't want just because it's the right thing to do. A modern stoic might stay in an unhappy marriage because divorce is frowned upon, or study a degree they hate for the sake of earning potential. An Epicurean would do the opposite: if something takes you closer to ataraxia without harming anyone, it's worth pursuing. If something takes you away from it, it's worth cutting off. An Epicurean would divorce if that choice leads to greater long-term happiness, or pursue a different career in exchange for lower earnings — as long as basic needs and the occasional treat are still covered.</p>
+
+      <p>I think Epicureanism is worth pursuing if you're the kind of person that doesn't need much to be happy. There's nothing more freeing than knowing you already have everything you need and don't need to constantly worry about money, success or status. After all, there are things money can't buy — and peace of mind is one of them.</p>
+
+      <p><em>Please note this is all my interpretation of the texts, some of which I read at like 2am after having one too many espressos. You don't have to agree with me.</em></p>
+    `
+  },
+  {
     slug: "ai-and-the-devaluation-of-art",
     title: "AI and the Devaluation of Art",
     subtitle: "What does art even mean these days?",
@@ -79,6 +116,24 @@ const POSTS = [
 ];
 
 const BOOKS = [
+  {
+    slug: "enchiridion",
+    year: 2026, title: "Enchiridion", author: "Epictetus",
+    genre: "Philosophy", genreClass: "genre-phil", stars: 4.5, pages: 96,
+    review: `<p>Short read. One of the pillars of Stoic philosophy, written over 2000 years ago and somehow still very relevant. I enjoyed the practical, no-nonsense approach and it made me think of topics like death a bit differently.</p>`
+  },
+  {
+    slug: "digital-minimalism",
+    year: 2026, title: "Digital Minimalism", author: "Cal Newport",
+    genre: "Self-help", genreClass: "genre-self", stars: 3.5, pages: 284,
+    review: `<p>Practical book on how to spend more time offline. I disagree with some of the measures because nowadays, it's not very realistic to be a functional person without at least some access to the internet — I for one wouldn't be able to work without it. I believe the book is meant to serve as a guide; you can nitpick what you'd like to apply to your own life and what's too extreme.</p>`
+  },
+  {
+    slug: "cynic-philosophers",
+    year: 2026, title: "The Cynic Philosophers: From Diogenes to Julian", author: "Robert Dobbin",
+    genre: "Philosophy", genreClass: "genre-phil", stars: 4, pages: 304,
+    review: `<p>Diogenes was quite the character and a big advocate for austerity leading to freedom. As a person that's not materialistic, a lot of things he talked about resonated with me. The other cynics also added their own flavour to the doctrine. I think this is a must-read for anyone with a minimalistic lifestyle, coming straight from one of the very first ones.</p>`
+  },
   {
     slug: "gifts-of-imperfection",
     year: 2026, title: "The Gifts of Imperfection", author: "Brené Brown",
@@ -197,9 +252,9 @@ function sidebarHTML() {
     <div class="sidebar-section">
       <div class="sidebar-heading">Offline Counter</div>
       <div class="counter-row">
-        <div class="counter-item"><strong>3</strong><span class="counter-label">articles</span></div>
+        <div class="counter-item"><strong>4</strong><span class="counter-label">articles</span></div>
         <div class="counter-item"><strong>8</strong><span class="counter-label">videos</span></div>
-        <div class="counter-item"><strong>13</strong><span class="counter-label">books read</span></div>
+        <div class="counter-item"><strong>16</strong><span class="counter-label">books read</span></div>
       </div>
     </div>
     <div class="sidebar-section">
