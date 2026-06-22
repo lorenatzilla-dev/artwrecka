@@ -22,7 +22,7 @@ const POSTS = [
       <blockquote>Technically, anyone can generate AI slop. Not everyone can be an artist.</blockquote>
       <p>A true artist remains an artist regardless of the tools available to them. Take away every brush, pencil, and tablet, and they will still find a way to create. They will draw in the dirt with a stick. If they do not have a stick, they will use their hands. Someone whose creative process depends entirely on AI may still have ideas, but without the AI they won't know how to bring those ideas into existence.</p>
       <p>For an artist, the ability to think, adapt, and solve visual problems is essential. Those skills come only through practice, years of learning how to translate an idea from the imagination onto a blank page as faithfully as possible.</p>
-      <p>I have to admit that I have been reluctant to fully embrace digital art myself. AI systems feed on digital artwork so easily, and it is painful to be accused, especially by fellow artists, of using AI in a piece that may have taken dozens of hours to complete. I understand where that suspicion comes from, but it's still painful. I suppose art has never been practical. It has always demanded effort, sacrifice, and persistence.</p>
+      <p>I have to admit that I have been reluctant to fully embrace digital art myself. AI systems feed on digital artwork so easily, and it is painful to be accused — especially by fellow artists — of using AI in a piece that may have taken dozens of hours to complete. I understand where that suspicion comes from, but it's still painful. I suppose art has never been practical. It has always demanded effort, sacrifice, and persistence.</p>
       <p>Personally, I prefer traditional media. Every sketch and every mark carries weight. If you make a mistake, you cannot simply erase it, and that imperfection is part of its charm. When I create something on paper, no one can diminish the value of the hours invested in it. More importantly, no one can take away the manual and mental skills I develop with every drawing.</p>
       <p>That, more than the final image, is where the true value of art lies.</p>
     `
@@ -210,10 +210,9 @@ function sidebarHTML() {
 }
 
 function headerHTML(activePage) {
-  const YT = YT_URL;
-  const pages  = ['blog', 'library', 'archive'];
-  const labels = { blog: 'Blog', library: 'Library', archive: 'Archive' };
-  const hrefs  = { blog: 'index.html', library: 'library.html', archive: 'archive.html' };
+  const pages  = ['blog', 'library', 'archive', 'about'];
+  const labels = { blog: 'Blog', library: 'Library', archive: 'Archive', about: 'About' };
+  const hrefs  = { blog: 'index.html', library: 'library.html', archive: 'archive.html', about: 'about.html' };
   return `
     <header class="site-header">
       <a href="index.html" class="site-logo-link">
@@ -224,7 +223,7 @@ function headerHTML(activePage) {
       ${pages.map(p =>
         `<a href="${hrefs[p]}"${activePage === p ? ' class="active" aria-current="page"' : ''}>${labels[p]}</a>`
       ).join('')}
-      <a href="${YT}" target="_blank" rel="noopener" class="nav-external">YouTube ↗</a>
+      <a href="${YT_URL}" target="_blank" rel="noopener" class="nav-external">YouTube ↗</a>
     </nav>
   `;
 }
@@ -237,9 +236,37 @@ function footerHTML() {
         <a href="index.html">Blog</a>
         <a href="library.html">Library</a>
         <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
         <a href="${YT_URL}" target="_blank" rel="noopener">YouTube ↗</a>
       </nav>
-      <span>Last updated June 2026</span>
+      <nav aria-label="Legal navigation">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </footer>
   `;
+}
+
+function initCookieBanner() {
+  if (localStorage.getItem('cookieConsent')) return;
+  const banner = document.createElement('div');
+  banner.id = 'cookie-banner';
+  banner.innerHTML = `
+    <div class="cookie-inner">
+      <p>We use cookies to improve your experience and to serve relevant ads via Google AdSense. By clicking "Accept", you consent to our use of cookies. <a href="privacy.html">Learn more</a>.</p>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-decline" onclick="cookieChoice(false)">Decline</button>
+        <button class="cookie-btn cookie-accept" onclick="cookieChoice(true)">Accept</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(banner);
+  // Animate in after a short delay
+  setTimeout(() => banner.classList.add('visible'), 100);
+}
+
+function cookieChoice(accepted) {
+  localStorage.setItem('cookieConsent', accepted ? 'accepted' : 'declined');
+  const banner = document.getElementById('cookie-banner');
+  if (banner) { banner.classList.remove('visible'); setTimeout(() => banner.remove(), 300); }
 }
